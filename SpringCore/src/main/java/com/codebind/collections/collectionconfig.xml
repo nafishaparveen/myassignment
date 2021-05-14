@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring.beans.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    
+
+<bean id="questions" class="com.codebind.collection.Questions">
+
+  <property name="questionid" value="2"></property>
+  <property name="Question" value="What is the meaning of ipl"></property>
+  <property name="answers" ref="collection3"></property>
+
+
+<util:list id="collection1" value-type="java.lang.String">
+   <value>india ka festival</value>
+   <value>biggest league</value>
+   <value>indian premiur league</value>
+</util:list>
+
+     <util:map id="collection2" map-class="java.util.Hashmap" key-type="java.lang.Integer" value-type="java.lang.String">
+     
+     <entry key="1" value="ipl is good"></entry>
+     <entry key="2" value="most entertain"></entry>
+     </util:map>
+     
+     
+     <util:set id="collection3" value-type="java.lang.String">
+      <value>om</value>
+      <value>pavan</value>
+     </util:set>
+     
+     </bean>
+     </beans>
